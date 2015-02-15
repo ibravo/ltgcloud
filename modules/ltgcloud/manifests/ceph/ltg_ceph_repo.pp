@@ -23,7 +23,7 @@ class ltgcloud::ceph::ltg_ceph_repo(
         # puppet versions prior to 3.5 do not support ensure, use enabled instead
         enabled    => $enabled,
         descr      => "External Ceph ${release}",
-        name       => "ext-ceph-${release}",
+        name       => "LTG-ceph-${release}",
 #        baseurl    => "http://ceph.com/rpm-${release}/el6/\$basearch",
         baseurl=> "http://katello.hq.ltg/pulp/repos/LTG_Federal/Library/custom/Subscription/Ceph_Giant_RH7",
         gpgcheck   => '0',
@@ -37,7 +37,7 @@ class ltgcloud::ceph::ltg_ceph_repo(
         # puppet versions prior to 3.5 do not support ensure, use enabled instead
         enabled    => $enabled,
         descr      => 'External Ceph noarch',
-        name       => "ext-ceph-${release}-noarch",
+        name       => "LTG-ceph-${release}-noarch",
 #        baseurl    => "http://ceph.com/rpm-${release}/el6/noarch",
         baseurl => "http://katello.hq.ltg/pulp/repos/LTG_Federal/Library/custom/Subscription/Ceph_C7_Giant_noarch",
         gpgcheck   => '0',
