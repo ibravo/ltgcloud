@@ -26,7 +26,7 @@ class ltgcloud::ceph::ltg_ceph_repo(
         name       => "ext-ceph-${release}",
 #        baseurl    => "http://ceph.com/rpm-${release}/el6/\$basearch",
         baseurl=> "http://katello.hq.ltg/pulp/repos/LTG_Federal/Library/custom/Subscription/Ceph_Giant_RH7",
-#        gpgcheck   => '1',
+        gpgcheck   => '0',
 #        gpgkey     => 'https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc',
         mirrorlist => absent,
         priority   => '10', # prefer ceph repos over EPEL
@@ -40,7 +40,7 @@ class ltgcloud::ceph::ltg_ceph_repo(
         name       => "ext-ceph-${release}-noarch",
 #        baseurl    => "http://ceph.com/rpm-${release}/el6/noarch",
         baseurl => "http://katello.hq.ltg/pulp/repos/LTG_Federal/Library/custom/Subscription/Ceph_C7_Giant_noarch",
-#        gpgcheck   => '1',
+        gpgcheck   => '0',
 #        gpgkey     => 'https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc',
         mirrorlist => absent,
         priority   => '10', # prefer ceph repos over EPEL
