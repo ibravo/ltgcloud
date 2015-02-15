@@ -19,6 +19,7 @@ class ltgcloud::ceph::ltg_ceph_repo(
 #        tag        => 'ceph',
 #      }
 
+#TODO: enable gpgcheck for LTG repos
       yumrepo { 'ext-ceph':
         # puppet versions prior to 3.5 do not support ensure, use enabled instead
         enabled    => $enabled,
