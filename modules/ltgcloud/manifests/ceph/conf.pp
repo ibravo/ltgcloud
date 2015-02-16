@@ -18,5 +18,5 @@
 # Class wrapper for the benefit of scenario_node_terminus
 #
 class ltgcloud::ceph::conf($args, $defaults = {}) {
-  create_resources(ceph_config, $args, $defaults)
+  create_resources(ltgcloud_ceph_config, $args, $defaults)
 }
