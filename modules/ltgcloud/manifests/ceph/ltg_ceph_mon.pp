@@ -3,7 +3,7 @@
 class ltgcloud::ceph::ltg_ceph_mon {
   require ltgcloud::ceph::ltg_ceph_base
 
-  Ceph_Config<| |> ->
+  Ltgcloud_Ceph_Config<| |> ->
   ltgcloud::ceph::ltg_ceph_mon_define { $::hostname:
     authentication_type => $ltgcloud::ceph::params::authentication_type,
     key                 => $ltgcloud::ceph::params::mon_key,

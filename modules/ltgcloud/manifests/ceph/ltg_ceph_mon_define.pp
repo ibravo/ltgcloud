@@ -123,7 +123,7 @@ define ltgcloud::ceph::ltg_ceph_mon_define (
         $public_addr_option = "--public_addr ${public_addr}"
       }
 
-      Ceph_Config<||> ->
+      Ltgcloud_Ceph_Config<||> ->
       exec { $ceph_mkfs:
         command   => "/bin/true # comment to satisfy puppet syntax requirements
 set -ex

@@ -115,9 +115,9 @@ class ltgcloud::ceph::cephinit (
 
   if $ensure !~ /(absent|purged)/ {
     # Make sure ceph is installed before managing the configuration
-    Package<| tag == 'ceph' |> -> Ceph_Config<| |>
+    Package<| tag == 'ceph' |> -> Ltgcloud_Ceph_Config<| |>
     # [global]
-    ceph_config {
+    ltgcloud_ceph_config {
       'global/fsid':                        value => $fsid;
       'global/keyring':                     value => $keyring;
       'global/osd_pool_default_pg_num':     value => $osd_pool_default_pg_num;
@@ -138,14 +138,14 @@ class ltgcloud::ceph::cephinit (
     }
 
     if $authentication_type == 'cephx' {
-      ceph_config {
+      ltgcloud_ceph_config {
         'global/auth_cluster_required': value => 'cephx';
         'global/auth_service_required': value => 'cephx';
         'global/auth_client_required':  value => 'cephx';
         'global/auth_supported':        value => 'cephx';
       }
     } else {
-      ceph_config {
+      ltgcloud_ceph_config {
         'global/auth_cluster_required': value => 'none';
         'global/auth_service_required': value => 'none';
         'global/auth_client_required':  value => 'none';
