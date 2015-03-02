@@ -133,7 +133,7 @@ sed -n 'N;\\%.*${name}.*\\n\\s*key = ${secret}%p' ${keyring_path} | grep ${name}
       $inject_keyring_option = " --keyring '${inject_keyring}' "
     }
 
-    Ltgcloud_Ceph_Config<||> -> Exec["ceph-injectkey-${name}"]
+    Ltgcloud_ceph_config<||> -> Exec["ceph-injectkey-${name}"]
     Ltgcloud::Ceph::Ltg_ceph_mon_define<||> -> Exec["ceph-injectkey-${name}"]
     exec { "ceph-injectkey-${name}":
       command   => "/bin/true # comment to satisfy puppet syntax requirements
