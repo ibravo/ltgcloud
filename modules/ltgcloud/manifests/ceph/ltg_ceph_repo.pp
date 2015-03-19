@@ -83,8 +83,8 @@ class ltgcloud::ceph::ltg_ceph_repo (
       yumrepo { 'ext-ceph':
         # puppet versions prior to 3.5 do not support ensure, use enabled instead
         enabled    => $enabled,
-        descr      => "External Ceph ${release}",
-        name       => "ext-ceph-${release}",
+        descr      => "External Ceph Testing",
+        name       => "LTG-ceph-Testing",
         baseurl    => "http://katello.hq.ltg/pulp/repos/LTG_Federal/Library/custom/Ceph/Testing_el7_x86_64/",
 #       baseurl    => "http://ceph.com/rpm-${release}/el6/\$basearch",
         gpgcheck   => '0',
@@ -98,7 +98,7 @@ class ltgcloud::ceph::ltg_ceph_repo (
         # puppet versions prior to 3.5 do not support ensure, use enabled instead
         enabled    => $enabled,
         descr      => 'External Ceph noarch',
-        name       => "ext-ceph-${release}-noarch",
+        name       => "LTG-ceph-Testing-noarch",
         baseurl    => "http://katello.hq.ltg/pulp/repos/LTG_Federal/Library/custom/Ceph/Testing_el7_noarch/",
 #       baseurl    => "http://ceph.com/rpm-${release}/el6/noarch",
         gpgcheck   => '0',
