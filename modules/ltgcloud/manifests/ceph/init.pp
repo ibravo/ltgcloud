@@ -85,7 +85,7 @@
 # [*public_network*] The address of the public network.
 #   Optional. {public-network-ip/netmask}
 #
-class ltgcloud::ceph::cephinit (
+class ltgcloud::ceph::init (
   $fsid,
   $ensure                     = present,
   $authentication_type        = 'cephx',
